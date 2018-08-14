@@ -20,16 +20,14 @@ bot.on("ready", async () => {
         users += bot.users.size;
         bot.user.setActivity(`${users} :אנשים בשרת`);
         var date = new Date();
-        console.log(date.getHours());
-        console.log(date.getMinutes());
-        if(date.getHours() === 16 && date.getMinutes() === 23 && dailyshop === false)
+        if(date.getHours() === 16 && date.getMinutes() === 25 && dailyshop === false)
         {
           var dailychannel = bot.channels.find("id", "478958861022134272");
           dailychannel.send("!fnbr shop");
           dailychannel.send("@everyone השופ של היום!");
           dailyshop = true;
         }
-        if(date.getHours() !== 3 && date.getMinutes() !== 10)
+        if(date.getHours() !== 16 && date.getMinutes() !== 25)
         {
           dailyshop = false;
         }
