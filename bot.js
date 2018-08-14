@@ -22,7 +22,7 @@ bot.on("ready", async () => {
         var date = new Date();
         console.log(date.getHours());
         console.log(date.getMinutes());
-        if(date.getHours() === 19 && date.getMinutes() === 20 && dailyshop === false)
+        if(date.getHours() === 16 && date.getMinutes() === 23 && dailyshop === false)
         {
           var dailychannel = bot.channels.find("id", "478958861022134272");
           dailychannel.send("!fnbr shop");
