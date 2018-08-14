@@ -19,18 +19,6 @@ bot.on("ready", async () => {
         var users = -1;
         users += bot.users.size;
         bot.user.setActivity(`${users} :אנשים בשרת`);
-        var date = new Date();
-        if(date.getHours() === 16 && date.getMinutes() === 27 && dailyshop === false)
-        {
-          var dailychannel = bot.channels.find("id", "478958861022134272");
-          dailychannel.send("!fnbr shop");
-          dailychannel.send("@everyone השופ של היום!");
-          dailyshop = true;
-        }
-        if(date.getHours() !== 16 && date.getMinutes() !== 27)
-        {
-          dailyshop = false;
-        }
     }
     setInterval(() => {setColor();}, 1000);
 });
