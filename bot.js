@@ -20,7 +20,7 @@ bot.on("ready", async () => {
         users += bot.users.size;
         bot.user.setActivity(`${users} :אנשים בשרת`);
     }
-    setInterval(() => {setColor();}, 10000);
+    setInterval(() => {setColor();}, 1000);
 });
 bot.login(botSettings.token);
 console.log("Login in using token: " + botSettings.token);
@@ -39,7 +39,7 @@ bot.on("guildMemberAdd", async member => {
 });
 bot.on("guildMemberRemove", (member, event) => {
     var welcomechannel = bot.channels.find("id", "478919302372655104");
-    welcomechannel.send("<@" + member.user.id + ">" + " !תמות ימנייאק");
+    welcomechannel.send("<@" + member.user.username + ">" + " לך ינגר!");
 });
 
 bot.on("message", async message => {
