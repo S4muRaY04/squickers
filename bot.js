@@ -20,7 +20,7 @@ bot.on("ready", async () => {
         users += bot.users.size;
         bot.user.setActivity(`${users} :אנשים בשרת`);
         var date = new Date();
-        if(date.getHours() === 19 && date.getMinutes() === 18 && dailyshop === false)
+        if(date.getHours() === 19 && date.getMinutes() === 20 && dailyshop === false)
         {
           var dailychannel = bot.channels.find("id", "478958861022134272");
           dailychannel.send("!fnbr shop");
