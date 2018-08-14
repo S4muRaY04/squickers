@@ -30,7 +30,7 @@ bot.on("guildMemberAdd", async member => {
     var role = member.guild.roles.find("name", "Member");
     member.addRole(role);
     var welcomechannel = bot.channels.find("id", "478919302372655104");
-    welcomechannel.send("<@" + member.user.id + ">" + " !ברוך הבא לשרת הדיסקורד של DK");
+    welcomechannel.send("<@" + member.user.id + ">" + " !DK ברוך הבא לשרת הדיסקודר של");
     if(member.bot)
     {
         role = member.guild.roles.find("name", "Bots");
