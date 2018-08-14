@@ -16,13 +16,9 @@ bot.on("ready", async () => {
     //Random color
     function setColor()
     {
-        let random = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-        const guild = bot.guilds.get("456391114874683402");
-        const role = guild.roles.find("id", "456391364914053122");
-       // role.edit({color: random});
         var users = -1;
         users += bot.users.size;
-        bot.user.setGame(`${users} :סמוראיים בשרת | Bot by @S4muRaY'#6861`, "http://twitch.tv/s4muray04");
+        bot.user.setActivity(`${users} :אנשים בשרת`);
     }
     setInterval(() => {setColor();}, 10000);
 });
@@ -31,10 +27,10 @@ console.log("Login in using token: " + botSettings.token);
 console.log("Using command prefix: \"" + botSettings.prefix + "\"");
 
 bot.on("guildMemberAdd", async member => {
-    var role = member.guild.roles.find("name", "[🚸] סמוראיים נודר");
+    var role = member.guild.roles.find("name", "Member");
     member.addRole(role);
-    var welcomechannel = bot.channels.find("id", "456397510190039051");
-    welcomechannel.send("<@" + member.user.id + ">" + " !ברוך הבא לשרת הסמוראיים של ישראל");
+    var welcomechannel = bot.channels.find("id", "478919302372655104");
+    welcomechannel.send("<@" + member.user.id + ">" + " !ברוך הבא לשרת הדיסקורד של DK");
     if(member.bot)
     {
         role = member.guild.roles.find("name", "Bots");
@@ -42,7 +38,7 @@ bot.on("guildMemberAdd", async member => {
     }
 });
 bot.on("guildMemberRemove", (member, event) => {
-    var welcomechannel = bot.channels.find("id", "456397510190039051");
+    var welcomechannel = bot.channels.find("id", "478919302372655104");
     welcomechannel.send("<@" + member.user.id + ">" + " !תמות ימנייאק");
 });
 
@@ -156,14 +152,5 @@ bot.on("message", async message => {
         setTimeout(function() {
             message.channel.bulkDelete(botmsg);
         }, 3000);
-    }
-    //Memes
-    if(command === `${botSettings.prefix}noy`)
-    {
-        message.channel.send("https://media2.giphy.com/media/xUPGcwTUqlOo3WFfwc/giphy.gif")
-    }
-    if(command === `${botSettings.prefix}omer`)
-    {
-        message.channel.send("https://giphy.com/gifs/mic-drop-peace-out-obama-3o7qDEq2bMbcbPRQ2c")
     }
 });
