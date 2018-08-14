@@ -11,7 +11,7 @@ bot.on("ready", async () => {
     }).catch(err => {
         console.log("Error: " + error.stack);
     });
-
+    var dailyshop = false;
     bot.user.setStatus("online");
     //Random color
     function setColor()
