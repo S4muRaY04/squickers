@@ -39,7 +39,7 @@ bot.on("guildMemberAdd", async member => {
 });
 bot.on("guildMemberRemove", (member, event) => {
     var welcomechannel = bot.channels.find("id", "478919302372655104");
-    welcomechannel.send("<@" + member.user.username + ">" + " לך ינגר!");
+    welcomechannel.send("" + member.user.username + " עזב את השרת!");
 });
 
 bot.on("message", async message => {
