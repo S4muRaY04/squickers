@@ -18,7 +18,7 @@ bot.on("ready", async () => {
     {
         var users = -1;
         users += bot.users.size;
-        bot.user.setActivity(`${users} :אנשים בשרת | Bot by S4muRaY#6861`);
+        bot.user.setActivity(`${users} :אנשים בשרת | Bot by DK S4muRaY#6861`);
         var date = new Date();
         if(date.getHours() === 24 && date.getMinutes() === 10 && dailyshop === false)
         {
